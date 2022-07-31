@@ -1,5 +1,5 @@
 ---
-title: "MODULE NAME"
+title: "Marketing Attribution Models"
 subtitle: "Digital and Social Media Strategies"
 author: "Lachlan Deer"
 institute: "Tilburg University"
@@ -20,14 +20,310 @@ class: font200
 TBD
 
 ---
-class: inverse, center, middle
+# TBD 
 
-# Section XX
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/wannamaker.png"
+knitr::include_graphics(url)
+```
+
+.right[
+Source: [Papergreat Blog](http://www.papergreat.com/2012/09/saturdays-postcard-wanamakers-and-1911.html)
+]
 
 ---
-# Slide Title 
+# A 'Real World' Conversion Journey
 
-course content here
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "https://storage.googleapis.com/twg-content/images/JourneyConversion_Inline.width-800.format-webp.webp"
+knitr::include_graphics(url)
+```
+
+.right[
+Source: [Think with Google](https://www.thinkwithgoogle.com/intl/en-ca/marketing-strategies/data-and-measurement/measurement-and-attribution-primer/)
+]
+
+---
+# Marketing Attribution Models 
+
+**Marketing attribution** is the process for determining which marketing touchpoints led to a conversion
+
+**Attribution models** are the rule, or set of rules, that determines how conversion credit is assigned to different marketing touchpoints
+
+---
+# The Conversion Journey
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "https://www.rockerbox.com/hs-fs/hubfs/mta%20blog%20image.png?width=808&name=mta%20blog%20image.png"
+knitr::include_graphics(url)
+```
+
+.right[
+Source: [Rockerbox](https://www.rockerbox.com/blog/attribution-101-single-touch-versus-multi-touch)
+]
+
+Discussion Q's:
+
+* What are the touchpoints? 
+* What is the attribution model?
+
+---
+# The Business Problem 
+
+**Seeking Answers to the following strategic questions**
+
+* How can I attribute credit to multiple campaigns that contributed to generating a conversion?
+
+The Attribution problem assumes data on **individual** consumer journeys
+
+Data-driven approaches to the solution:
+
+* Rule Based Attribution 
+* Data-driven Models
+
+---
+# Marketing Methods vs Attribution
+
+.pull-left[
+```{r, echo = FALSE, fig.align = "center", out.width="60%"}
+url <- "https://e26mhwspmro.exactdn.com/wp-content/uploads/2016/01/6-attribution-marketing-infographic.jpg?strip=all&lossy=1&w=2560&ssl=1
+"
+knitr::include_graphics(url)
+```
+Source: [Nick Stone](https://nick-stone.com/data-driven-v-rule-based-attribution/)
+]
+
+.pull-right[
+* Some text
+]
+---
+# What KPIs Can We Attribute to Ads?
+
+* Which of the following is measurable? How?
+
+```{r, echo = FALSE, fig.align = "center", out.width="90%"}
+url <- "figs/which_kpi.png"
+knitr::include_graphics(url)
+```
+
+<br/>
+<br/>
+
+.right[
+Source: [Data Driven Marketing Association](https://www.thinkwithgoogle.com/_qs/documents/8364/TwGxDDMA_AttributionWhitepaper.pdf)
+]
+
+---
+class: inverse, center, middle
+
+# Rule Based Models
+
+---
+# A Single Customer Journey
+
+Let's use a working example:
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/customer_journey.png"
+knitr::include_graphics(url)
+```
+
+<br/>
+<br/>
+
+**Note**: Multiple Consumers $\implies$ do for each consumer and sum.
+
+---
+# Last Touch Attribution
+
+**Last touch** (**Last-click**): attribution looks backward from each conversion to find the *last ad* that the user saw (clicked) on prior to the conversion
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/customer_journey.png"
+knitr::include_graphics(url)
+```
+
+<br/>
+<br/>
+
+Since consumers don't click on ads that much, attrubuted sales lower using last click.
+
+---
+# Limitations of Last Touch
+
+Mistakes when using last touch to estimate incremental sales:
+
+1. Other ads may have influenced customer & contributed to the sale
+  * Issue is well recognized
+2. All sales are *incremental* ... would  not have bought if did not see ads
+  * Less well recognized
+3. Unfairly favours channels that tend to show ads towards the end of path to purchase
+  * Such as search, or ads served due to retargeting
+
+What alternatives exist in the 'rule-based' world?
+
+---
+# First Touch Attribution
+
+**First touch** (**First-click**): attribution looks backward from each conversion to find the *first ad* that the user saw (clicked) on prior to the conversion
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/customer_journey.png"
+knitr::include_graphics(url)
+```
+
+---
+# Linear Attribution
+
+**Linear Attribution**: attribution looks backward from each conversion to find the *each ad* that the user saw (clicked) on prior to the conversion assigning them equal weight
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/customer_journey.png"
+knitr::include_graphics(url)
+```
+
+---
+# Position Based Attribution 
+
+**Position Based Attribution**: attribution looks backward from each conversion to find the *each ad* that the user saw (clicked) on prior to the conversion assigning higher weight to the *first* and *last*.
+
+* Need to decide on *what* the higher weight is.
+  * Commonly seen: 30% or 40% for both first and last
+
+* aka U-Shaped Attribution  
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/customer_journey.png"
+knitr::include_graphics(url)
+```
+
+---
+# Time Decay Attribution
+
+**Time Decay**: attribution looks backward from each conversion to find the *each ad* that the user saw (clicked) on prior to the conversion assigning higher weight to more recent ads.
+
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/customer_journey.png"
+knitr::include_graphics(url)
+```
+
+---
+# Summary of Rule Based Attribution
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/rule_based_attribution.jpg"
+knitr::include_graphics(url)
+```
+
+---
+# Limitations of Rule Based Attribution
+
+* Rule based solutions are inflexible and unable to distinguish between the true low and high impact touch-points
+  *  Leads to an inaccurate division of credit.
+
+* Ignores all customers that don't convert
+
+* Analyst / Manager decides the attribution
+  * Can pick something to show the results one needs
+
+---
+class: inverse, center, middle
+
+# Data-Driven Models
+
+---
+# Data-Driven Attribution
+
+Key Difference: dealing with mid-journey funnel in a non ad-hoc way
+
+* .. and mid funnel parts of customer journeys matter [Think with Google](https://www.thinkwithgoogle.com/intl/en-gb/consumer-insights/consumer-journey/mid-funnel-marketing-brand-performance/)
+
+Example Models:
+
+1. Markov Attribution Models 
+2. Shapley Value Attribution   
+
+---
+# Markov Attribution Models
+
+**Markov attribution model**: a probabilistic model that represents buyer journeys as a graph, 
+  * Graph's nodes are the touchpoints,
+  * Graph's are observed transitions between those states
+
+Simple Example: 
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "https://miro.medium.com/max/479/1*xGLzg4lqC1U9Gat2rYeaHQ.png"
+knitr::include_graphics(url)
+```
+
+.right[
+Source: [Kinley (2020)](https://towardsdatascience.com/multi-channel-marketing-attribution-with-markov-6b744c0b119a)
+]
+
+---
+# Markov Attribution Models: Buyer Journey
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "https://miro.medium.com/max/700/1*M5QEri3EgCZM8ZYBdGFbSw.png"
+knitr::include_graphics(url)
+```
+
+.right[
+Source: [Kinley (2020)](https://towardsdatascience.com/multi-channel-marketing-attribution-with-markov-6b744c0b119a)
+]
+
+---
+# Markov Attribution Models
+
+Key Notion: Measuring the **removal effect** 
+
+* Simulate removing an advertising campaign from a graph ...
+* ... Measure change in success rate (i.e. change in KPI)
+* ... (the how to is beyond the scope of this class)
+
+**Attribution value** of a given campaign ($A$) is then:
+
+$$
+A = \text{Total Value of KPI} \times \frac{\text{Campaign Removal Effect}}{\text{Sum of All Removal Effects}}
+$$
+
+---
+# Shapley Value Attribution
+
+**Shapley Value Attribution**: finds each ad campaigns marginal contribution, averaged over every sequence where the campaign could have been shown
+
+* Different campaigns work *together* in cooperation to generate value
+* Based on co-operative game theory (beyond the scope of this class...)
+
+Key Idea: Measuring each campaigns **marginal contribution**
+
+* Determined by what is gained or lost by removing them from the game
+
+---
+class: inverse, center, middle
+# Concluding Thoughts 
+
+---
+# Remaining Issues
+
+Outstanding issues in Marketing Attribution Models:
+
+* Cross-Device Journeys
+  - Example: search on computer *and* mobile
+
+* Cookie Destruction 
+  - Consumer deletion of history
+  - Privacy regulations, GDPR, 'end of cookies'
+
+* Online / Offline Bridges 
+  - Exposure to offline campaigns (TV, newspapers) difficult to track at user level
+
+---
+# Summary
+
+TBD
 
 ---
 # License & Citation
