@@ -13,14 +13,17 @@ output:
       highlightLines: true
       countIncrementalSlides: false
 ---
-class: font200
+class: font170
 
 # Learning Goals for this Week
 
-TBD
+* Define the terms marketing attribution and attribution models 
+* Identify which KPIs are amenable to attribution modelling 
+* Compare and contrast alternative attribution models 
+* Calculate attribution to ads using rule based, and Shapley Value attribution
 
 ---
-# TBD 
+# Wasteful Advertising Expenditures? 
 
 ```{r, echo = FALSE, fig.align = "center", out.width="100%"}
 url <- "figs/wannamaker.png"
@@ -44,6 +47,7 @@ Source: [Think with Google](https://www.thinkwithgoogle.com/intl/en-ca/marketing
 ]
 
 ---
+class: font160
 # Marketing Attribution Models 
 
 **Marketing attribution** is the process for determining which marketing touchpoints led to a conversion
@@ -51,6 +55,7 @@ Source: [Think with Google](https://www.thinkwithgoogle.com/intl/en-ca/marketing
 **Attribution models** are the rule, or set of rules, that determines how conversion credit is assigned to different marketing touchpoints
 
 ---
+class: font160
 # The Conversion Journey
 
 ```{r, echo = FALSE, fig.align = "center", out.width="100%"}
@@ -62,12 +67,13 @@ knitr::include_graphics(url)
 Source: [Rockerbox](https://www.rockerbox.com/blog/attribution-101-single-touch-versus-multi-touch)
 ]
 
-Discussion Q's:
+**Discussion Q's:**
 
 * What are the touchpoints? 
 * What is the attribution model?
 
 ---
+class: font170
 # The Business Problem 
 
 **Seeking Answers to the following strategic questions**
@@ -76,13 +82,14 @@ Discussion Q's:
 
 The Attribution problem assumes data on **individual** consumer journeys
 
-Data-driven approaches to the solution:
+**Data-driven** approaches to the solution:
 
 * Rule Based Attribution 
 * Data-driven Models
 
 ---
-# Marketing Methods vs Attribution
+class: font140
+# Attribution in the Wild
 
 .pull-left[
 ```{r, echo = FALSE, fig.align = "center", out.width="60%"}
@@ -94,14 +101,21 @@ Source: [Nick Stone](https://nick-stone.com/data-driven-v-rule-based-attribution
 ]
 
 .pull-right[
-* Some text
+**Highlights:**
+
+* Only 11% of surveyed marketers used advanced algorithmic attribution, while 35% favored rules-based attribution and 23% measured only first or last touch points.
+* 33% of the surveyed marketers face challenges in: "Knowing how to leverage results to generate new insights and actions."
+
+**Opportunity:** How to get strategic value out of attribution modelling tools!
 ]
+
 ---
+class: font140
 # What KPIs Can We Attribute to Ads?
 
 * Which of the following is measurable? How?
 
-```{r, echo = FALSE, fig.align = "center", out.width="90%"}
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
 url <- "figs/which_kpi.png"
 knitr::include_graphics(url)
 ```
@@ -119,9 +133,10 @@ class: inverse, center, middle
 # Rule Based Models
 
 ---
+class: font150
 # A Single Customer Journey
 
-Let's use a working example:
+Working example: **Individual** Customer Journey, KPI is sales ($)
 
 ```{r, echo = FALSE, fig.align = "center", out.width="100%"}
 url <- "figs/customer_journey.png"
@@ -134,6 +149,7 @@ knitr::include_graphics(url)
 **Note**: Multiple Consumers $\implies$ do for each consumer and sum.
 
 ---
+class: font140
 # Last Touch Attribution
 
 **Last touch** (**Last-click**): attribution looks backward from each conversion to find the *last ad* that the user saw (clicked) on prior to the conversion
@@ -149,20 +165,22 @@ knitr::include_graphics(url)
 Since consumers don't click on ads that much, attrubuted sales lower using last click.
 
 ---
+class: font160
 # Limitations of Last Touch
 
 Mistakes when using last touch to estimate incremental sales:
 
-1. Other ads may have influenced customer & contributed to the sale
+1. **Other ads may have influenced customer & contributed to the sale**
   * Issue is well recognized
-2. All sales are *incremental* ... would  not have bought if did not see ads
+2. **All sales are treated as *incremental*** ... would  not have bought if did not see ads
   * Less well recognized
-3. Unfairly favours channels that tend to show ads towards the end of path to purchase
+3. **Unfairly favours channels that tend to show ads towards the end of path to purchase**
   * Such as search, or ads served due to retargeting
 
 What alternatives exist in the 'rule-based' world?
 
 ---
+class: font160
 # First Touch Attribution
 
 **First touch** (**First-click**): attribution looks backward from each conversion to find the *first ad* that the user saw (clicked) on prior to the conversion
@@ -172,7 +190,12 @@ url <- "figs/customer_journey.png"
 knitr::include_graphics(url)
 ```
 
+.font100[
+Figure borrowed from [Attribution App (2022)](https://www.attributionapp.com/blog/what-is-multi-touch-attribution-how-do-i-choose-the-right-model/) 
+]
+
 ---
+class: font160
 # Linear Attribution
 
 **Linear Attribution**: attribution looks backward from each conversion to find the *each ad* that the user saw (clicked) on prior to the conversion assigning them equal weight
@@ -183,6 +206,7 @@ knitr::include_graphics(url)
 ```
 
 ---
+class: font120
 # Position Based Attribution 
 
 **Position Based Attribution**: attribution looks backward from each conversion to find the *each ad* that the user saw (clicked) on prior to the conversion assigning higher weight to the *first* and *last*.
@@ -198,6 +222,7 @@ knitr::include_graphics(url)
 ```
 
 ---
+class: font160
 # Time Decay Attribution
 
 **Time Decay**: attribution looks backward from each conversion to find the *each ad* that the user saw (clicked) on prior to the conversion assigning higher weight to more recent ads.
@@ -217,14 +242,16 @@ knitr::include_graphics(url)
 ```
 
 ---
+class: font160
+
 # Limitations of Rule Based Attribution
 
-* Rule based solutions are inflexible and unable to distinguish between the true low and high impact touch-points
+* Rule based solutions are **inflexible** and **unable to distinguish** between the true **low and high impact touch-points**
   *  Leads to an inaccurate division of credit.
 
-* Ignores all customers that don't convert
+* **Ignores** all customers that **don't convert**
 
-* Analyst / Manager decides the attribution
+* **Analyst / Manager decides the attribution**
   * Can pick something to show the results one needs
 
 ---
@@ -233,16 +260,22 @@ class: inverse, center, middle
 # Data-Driven Models
 
 ---
+class: font160
 # Data-Driven Attribution
 
-Key Difference: dealing with mid-journey funnel in a non ad-hoc way
+**Key Difference:** dealing with mid-journey funnel in a non ad-hoc way
 
-* .. and mid funnel parts of customer journeys matter [Think with Google](https://www.thinkwithgoogle.com/intl/en-gb/consumer-insights/consumer-journey/mid-funnel-marketing-brand-performance/)
+* .. and mid funnel parts of customer journeys matter 
+* See [Think with Google](https://www.thinkwithgoogle.com/intl/en-gb/consumer-insights/consumer-journey/mid-funnel-marketing-brand-performance/)
 
 Example Models:
 
 1. Markov Attribution Models 
 2. Shapley Value Attribution   
+
+**Remark**: The methodologies are a little tough ...
+
+* I'll give you a flavour of how they work
 
 ---
 # Markov Attribution Models
@@ -275,6 +308,7 @@ Source: [Kinley (2020)](https://towardsdatascience.com/multi-channel-marketing-a
 ]
 
 ---
+class: font160
 # Markov Attribution Models
 
 Key Notion: Measuring the **removal effect** 
@@ -283,47 +317,96 @@ Key Notion: Measuring the **removal effect**
 * ... Measure change in success rate (i.e. change in KPI)
 * ... (the how to is beyond the scope of this class)
 
-**Attribution value** of a given campaign ($A$) is then:
+**Attribution value** of a given campaign is then:
 
 $$
 A = \text{Total Value of KPI} \times \frac{\text{Campaign Removal Effect}}{\text{Sum of All Removal Effects}}
 $$
 
+We'll skip the nitty gritty details - it gets computationally intensive
+
 ---
+class: font160
 # Shapley Value Attribution
 
-**Shapley Value Attribution**: finds each ad campaigns marginal contribution, averaged over every sequence where the campaign could have been shown
+**Shapley Value Attribution**: finds each ad campaigns **marginal contribution**, averaged over every sequence where the campaign could have been shown
 
-* Different campaigns work *together* in cooperation to generate value
+* Different campaigns work *together* in cooperation to generate value (i.e. some KPI)
 * Based on co-operative game theory (beyond the scope of this class...)
 
 Key Idea: Measuring each campaigns **marginal contribution**
 
-* Determined by what is gained or lost by removing them from the game
+* Determined by what is gained or lost by removing them from a coalition of campaigns
+* Order of ads doesn't matter (in the standard setup)
+
+---
+# Two Channel Example: Conversions
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "https://miro.medium.com/max/1400/1*_BIpsY-apc0PBRK5dNYs0Q.png"
+knitr::include_graphics(url)
+```
+
+.right[
+Source: [Dataiku (2020)](https://blog.dataiku.com/step-up-your-marketing-attribution-with-game-theory)
+]
+
+---
+class: font160
+# Two Channel Example: Conversions 
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "https://miro.medium.com/max/2000/1*pWjIs3kSOCYwRym_Qm9gMw.png"
+knitr::include_graphics(url)
+```
+
+$\implies$ Facebook Ads account for 20 conversions
+
+.right[
+Source: [Dataiku (2020)](https://blog.dataiku.com/step-up-your-marketing-attribution-with-game-theory)
+]
+
+---
+class: font160
+# Two Channel Example: Conversions II
+
+.center[
+**In Class ...**
+]
 
 ---
 class: inverse, center, middle
 # Concluding Thoughts 
 
 ---
+class: font160
 # Remaining Issues
 
 Outstanding issues in Marketing Attribution Models:
 
-* Cross-Device Journeys
+* **Cross-Device Journeys**
   - Example: search on computer *and* mobile
 
-* Cookie Destruction 
+* **Cookie Destruction** 
   - Consumer deletion of history
   - Privacy regulations, GDPR, 'end of cookies'
 
-* Online / Offline Bridges 
+* **Online / Offline Bridges** 
   - Exposure to offline campaigns (TV, newspapers) difficult to track at user level
 
 ---
+class: font160
 # Summary
 
-TBD
+* Attribution Models assign conversion credits to marketing campaigns 
+
+* Last Touch Attribution is one of the most common attribution models but has limitations
+
+* Other ad-hoc models get around some of Last Touch's faults, but the allocation rules are somewhat arbitrary 
+
+* Data driven methods improve on ad-hoc attribution by improving on how mid journey campaigns accrue credit 
+
+* Shapley Value attribution uses marginal contributions to a coalition as a means to attribute KPIs to ads.
 
 ---
 # License & Citation
@@ -332,7 +415,7 @@ Suggested Citation:
 
 ```{r, engine='out', eval = FALSE}
 @misc{deerdsms2022,
-      title={"Digital and Social Media Strategies: Lecture Slide Template"},
+      title={"Digital and Social Media Strategies: Marketing Attribution Models"},
       author={Lachlan Deer},
       year={2022},
       url = "https://github.com/tisem-digital-marketing/dsms-lecture-template"
