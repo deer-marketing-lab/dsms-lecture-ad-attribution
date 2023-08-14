@@ -568,7 +568,7 @@ class: font160
 
 I have borrowed, at times quite liberally, from the following:
 
-* Elea Fet McDonnel's "[Ad Response Tutorial](https://github.com/eleafeit/ad_response_tutorial)"
+* Elea McDonnell Feit's "[Ad Response Tutorial](https://github.com/eleafeit/ad_response_tutorial)"
 
 ---
 # License & Citation
@@ -580,7 +580,7 @@ Suggested Citation:
       title={"Digital and Social Media Strategies: Marketing Attribution Models"},
       author={Lachlan Deer},
       year={2023},
-      url = "https://github.com/tisem-digital-marketing/dsms-lecture-ad-attribution"
+      url = "https://github.com/deer-marketing-lab/dsms-lecture-ad-attribution"
 }
 ```
 
