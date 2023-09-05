@@ -127,7 +127,7 @@ class: font160
 
 **Next Week**: Marketing Mix Modelling 
 
-* With "aggregate" advertising spend and sales data
+* With "aggregate" advertising spending and sales data
 
 **Later**: Experimental Approaches
 
@@ -193,7 +193,7 @@ class: font170
 
 * How can I attribute credit to multiple campaigns that contributed to generating a conversion?
 
-The **attribution problem* assumes data on *individual* consumer journeys
+The *attribution problem* assumes data on *individual* consumer journeys
 
 Approaches to the solution:
 
@@ -293,7 +293,7 @@ Source: [Attribution App (2022)](https://www.attributionapp.com/blog/what-is-mul
 class: font140
 # Last Touch Attribution
 
-**Last touch** (**Last-click**): attribution looks backward from each conversion to find the *last ad* that the user saw (clicked) on prior to the conversion
+**Last touch** (**Last-click**): attribution looks backward from each conversion to find the *last ad* that the user saw (or clicked on) prior to the conversion
 
 ```{r, echo = FALSE, fig.align = "center", out.width="100%"}
 url <- "figs/customer_journey.png"
@@ -316,7 +316,7 @@ Mistakes when using last touch to estimate incremental sales:
 
 1. **Other ads may have influenced customer & contributed to the sale**
   * Issue is well recognized
-2. **All sales are treated as *incremental*** ... would  not have bought if did not see ads
+2. **All sales are treated as *incremental*** ... would  not have bought if one did not see ads
   * Less well recognized
 3. **Unfairly favours channels that tend to show ads towards the end of path to purchase**
   * Such as search, or ads served due to retargeting
@@ -352,7 +352,7 @@ knitr::include_graphics(url)
 class: font160
 # First Touch Attribution
 
-**First touch** (**First-click**): attribution looks backward from each conversion to find the *first ad* that the user saw (clicked) on prior to the conversion
+**First touch** (**First-click**): attribution looks backward from each conversion to find the *first ad* that the user saw (or clicked on) prior to the conversion
 
 ```{r, echo = FALSE, fig.align = "center", out.width="100%"}
 url <- "figs/customer_journey.png"
@@ -367,7 +367,7 @@ Source: [Attribution App (2022)](https://www.attributionapp.com/blog/what-is-mul
 class: font160
 # Linear Attribution
 
-**Linear Attribution**: attribution looks backward from each conversion to find the *each ad* that the user saw (clicked) on prior to the conversion assigning them equal weight
+**Linear Attribution**: attribution looks backward from each conversion to find  *each ad* that the user saw (or clicked on) prior to the conversion, assigning them equal weight
 
 ```{r, echo = FALSE, fig.align = "center", out.width="100%"}
 url <- "figs/customer_journey.png"
@@ -381,7 +381,7 @@ Source: [Attribution App (2022)](https://www.attributionapp.com/blog/what-is-mul
 class: font120
 # Position Based Attribution 
 
-**Position Based Attribution**: attribution looks backward from each conversion to find the *each ad* that the user saw (clicked) on prior to the conversion assigning higher weight to the *first* and *last*.
+**Position Based Attribution**: attribution looks backward from each conversion to find *each ad* that the user saw (or clicked on) prior to the conversion, assigning higher weight to the *first* and *last*.
 
 * Need to decide on *what* the higher weight is.
   * Commonly seen: 30% or 40% for both first and last
@@ -400,7 +400,7 @@ Source: [Attribution App (2022)](https://www.attributionapp.com/blog/what-is-mul
 class: font160
 # Time Decay Attribution
 
-**Time Decay**: attribution looks backward from each conversion to find the *each ad* that the user saw (clicked) on prior to the conversion assigning higher weight to more recent ads.
+**Time Decay**: attribution looks backward from each conversion to find *each ad* that the user saw (or clicked on) prior to the conversion, assigning higher weight to more recent ads.
 
 
 ```{r, echo = FALSE, fig.align = "center", out.width="100%"}
@@ -460,7 +460,7 @@ Example Models:
 
 **Markov attribution model**: a probabilistic model that represents buyer journeys as a graph, 
   * Graph's nodes are the touchpoints,
-  * Graph's are observed transitions between those states
+  * Graph's edges are observed transitions between those states
 
 Simple Example: 
 
@@ -507,12 +507,12 @@ We'll skip the nitty gritty details - it gets computationally intensive
 class: font160
 # Shapley Value Attribution
 
-**Shapley Value Attribution**: finds each ad campaigns **marginal contribution**, averaged over every sequence where the campaign could have been shown
+**Shapley Value Attribution**: finds each ad campaign;s **marginal contribution**, averaged over every sequence where the campaign could have been shown
 
 * Different campaigns work *together* in cooperation to generate value (i.e. some KPI)
 * Based on co-operative game theory (beyond the scope of this class...)
 
-Key Idea: Measuring each campaigns **marginal contribution**
+Key Idea: Measuring each campaign's **marginal contribution**
 
 * Determined by what is gained or lost by removing them from a coalition of campaigns
 * Order of ads doesn't matter (in the standard setup)
