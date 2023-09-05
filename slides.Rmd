@@ -201,6 +201,31 @@ Approaches to the solution:
 * Data-driven Models
 
 ---
+# Why Use Touch Attribution?
+
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/why_mta.png"
+knitr::include_graphics(url)
+```
+
+.font70[
+Source: [IAB (2019)](https://www.iab.com/wp-content/uploads/2019/11/IAB_MMA_MTA-Guidebook_Nov-2019.pdf)
+]
+
+---
+# Attribution Modelling is Relatively New
+
+```{r, echo = FALSE, fig.align = "center", out.width="70%"}
+url <- "figs/when_mta.png"
+knitr::include_graphics(url)
+```
+
+.font70[
+Source: [IAB (2019)](https://www.iab.com/wp-content/uploads/2019/11/IAB_MMA_MTA-Guidebook_Nov-2019.pdf)
+]
+
+---
 class: font140
 # Attribution in the Wild
 
@@ -561,6 +586,27 @@ Outstanding issues in Marketing Attribution Models:
 
 * **Online / Offline Bridges** 
   - Exposure to offline campaigns (TV, newspapers) difficult to track at user level
+
+---
+class: font160
+# Post-Lecture Survey
+
+.pull-left[
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/2022-survey.png"
+knitr::include_graphics(url)
+```
+]
+
+.pull-right[
+
+<br>
+<br>
+
+Fill out [this survey](https://forms.gle/ZdBsLBeveuhY6ahi9) to let us know your thoughts about the lecture
+
+]
+
 
 ---
 class: font160
