@@ -1,14 +1,14 @@
 # Digital and Social Media Strategies: Advertising Attribution Models
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-stable-green.svg)](https://www.tidyverse.org/lifecycle/#maturing)
-[![lifecycle](https://img.shields.io/badge/version-2023-red.svg)]()
+[![lifecycle](https://img.shields.io/badge/version-2024-red.svg)]()
 
 ## Meta-Information
 
 * Module Maintainer: Lachlan Deer (`@lachlandeer`)
-* Course: [Digital and Social Media Strategies](https://github.com/deer-marketing-lab/2023-dsms)
+* Course: [Digital and Social Media Strategies](https://github.com/deer-marketing-lab/2024-dsms)
 * Institute: Dept of Marketing, Tilburg University
-* Current Version: [2023 edition](https://github.com/deer-marketing-lab/2023-dsms)
+* Current Version: [2024 edition](https://github.com/deer-marketing-lab/2024-dsms)
 
 ## Introduction
 
@@ -106,10 +106,10 @@ url = "https://github.com/deer-marketing-lab/dsms-lecture-ad-attribution"
 ## Suggested Citation (Template)
 
 ```{r, engine='out', eval = FALSE}
-@misc{deerdsms2023
+@misc{deerdsms2024
       title={"Digital and Social Media Strategies: Marketing Attribution Models"},
       author={Lachlan Deer},
-      year={2023},
+      year={2024},
       url = "https://github.com/deer-marketing-lab/dsms-lecture-ad-attribution"
 }
 ```
