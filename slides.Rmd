@@ -32,14 +32,16 @@ class: inverse, center, middle
 class: font160
 # Where Are We Now? 
 
+```{r, echo = FALSE, fig.align = "center", out.width="35%"}
+url <- "https://png.pngtree.com/png-clipart/20211024/original/pngtree-pile-of-cartoonish-cute-doodle-theme-books-png-image_6871556.png"
+knitr::include_graphics(url)
+```
+
 Course Themes:
 
-1. **Classical Approaches to Measuring Advertising Effects**
-2. Modern Evaluation of Digital Advertising Effects
+1. **Measuring Advertising Effects**
 2. User Generated Content & Social Media
-3. Email & Mobile Marketing
-4. Issues in (Massive) Online Marketplaces
-5. Impact of Privacy Regulations 
+3. Impact of Privacy Regulations 
 
 ---
 # Wasteful Advertising Expenditures? 
@@ -119,7 +121,7 @@ knitr::include_graphics(url)
 class: font160
 # The Path Ahead... 
 
-.center[.font120[Popular techniques for estimating the incremental sales due to advertising]]
+.center[.font120[Popular techniques for estimating impact of advertising on sales]]
 
 **This Week**: Marketing Attribution Rules 
 
@@ -160,6 +162,16 @@ Source: [Think with Google](https://www.thinkwithgoogle.com/intl/en-ca/marketing
 class: font160
 # Marketing Attribution Models 
 
+```{r, echo = FALSE, fig.align = "center", out.width="35%"}
+url <- "https://www.getg5.com/wp-content/uploads/2020/07/GettyImages-1198986461-1024x844.jpg"
+knitr::include_graphics(url)
+```
+
+.font80[
+Source: [G5](https://www.getg5.com/marketing-attribution-explained/)
+]
+
+
 **Marketing attribution** is the process for determining which marketing touchpoints led to a conversion
 
 **Attribution models** are the rule, or set of rules, that determines how conversion credit is assigned to different marketing touchpoints
@@ -189,11 +201,12 @@ Source: [Rockerbox](https://www.rockerbox.com/blog/attribution-101-single-touch-
 class: font170
 # The Business Problem 
 
-**Seeking Answers to the following strategic questions**
+**Seeking Answers to the following strategic question:**
 
-* How can I attribute credit to multiple campaigns that contributed to generating a conversion?
+* How can an analyst attribute credit to multiple campaigns that (may have) contributed to generating a conversion?
 
-The *attribution problem* assumes data on *individual* consumer journeys
+`r icons:::icon_style(icons::fontawesome("bullseye", style = "solid"), scale = 1)`
+The *attribution problem* needs data on *individual* consumer journeys
 
 Approaches to the solution:
 
@@ -235,7 +248,7 @@ url <- "https://e26mhwspmro.exactdn.com/wp-content/uploads/2016/01/6-attribution
 "
 knitr::include_graphics(url)
 ```
-Source: [Nick Stone](https://nick-stone.com/data-driven-v-rule-based-attribution/)
+.font70[Source: [Nick Stone](https://nick-stone.com/data-driven-v-rule-based-attribution/)]
 ]
 
 .pull-right[
@@ -248,7 +261,7 @@ Source: [Nick Stone](https://nick-stone.com/data-driven-v-rule-based-attribution
 ]
 
 ---
-class: font140
+class: font160
 # What KPIs Can We Attribute to Ads?
 
 * Which of the following is measurable? How?
@@ -261,9 +274,9 @@ knitr::include_graphics(url)
 <br/>
 <br/>
 
-.right[
+.right[.font80[
 Source: [Data Driven Marketing Association](https://www.thinkwithgoogle.com/_qs/documents/8364/TwGxDDMA_AttributionWhitepaper.pdf)
-]
+]]
 
 ---
 class: inverse, center, middle
@@ -287,7 +300,9 @@ Source: [Attribution App (2022)](https://www.attributionapp.com/blog/what-is-mul
 <br/>
 <br/>
 
-**Note**: Multiple Consumers $\implies$ do for each consumer and sum.
+**Note**: Multiple Consumers $\implies$ do for each consumer and sum. 
+
+* See "Hands on" part of Lab Assignment.
 
 ---
 class: font140
@@ -342,9 +357,11 @@ When might these conditions be met?
 class: clear
 
 ```{r, echo = FALSE, fig.align = "center", out.width="50%"}
-url <- "https://globalfinance.s3.amazonaws.com/media/image/image-from-seeking-alternatives-1-1403459208.jpg"
+url <- "https://s44650.pcdn.co/wp-content/uploads/2023/07/image-from-seeking-alternatives-1-1403459208.jpg"
 knitr::include_graphics(url)
 ```
+
+.font70[Source: [Global Finance Magazine](https://gfmag.com/emerging-frontier-markets/seeking-alternatives/)]
 
 .center[.font180[Alternatives?]]
 
@@ -424,6 +441,12 @@ class: font160
 
 # Limitations of Rule Based Attribution
 
+
+```{r, echo = FALSE, fig.align = "center", out.width="25%"}
+url <- "https://www.vkf-renzel.com/out/pictures/generated/product/1/650_650_75/r12044336-01/general-warning-sign-10836-1.jpg"
+knitr::include_graphics(url)
+```
+
 * Rule based solutions are **inflexible** and **unable to distinguish** between the true **low and high impact touch-points**
   *  Leads to an inaccurate division of credit.
 
@@ -443,7 +466,7 @@ class: font160
 
 **Key Difference:** dealing with mid-journey funnel in a non ad-hoc way
 
-* .. and mid funnel parts of customer journeys matter ([Think with Google](https://www.thinkwithgoogle.com/intl/en-gb/consumer-insights/consumer-journey/mid-funnel-marketing-brand-performance/))
+* .. and mid-funnel parts of customer journeys matter ([Think with Google](https://www.thinkwithgoogle.com/intl/en-gb/consumer-insights/consumer-journey/mid-funnel-marketing-brand-performance/))
 
 Example Models:
 
@@ -452,10 +475,10 @@ Example Models:
 
 **Remark**: The methodologies are a little tough ...
 
-* I'll give you a flavour of how they work
-* ... and compare their performance using our example above
+* We'll get a flavour of how they work
 
 ---
+class: font140
 # Markov Attribution Models
 
 **Markov attribution model**: a probabilistic model that represents buyer journeys as a graph, 
@@ -464,7 +487,7 @@ Example Models:
 
 Simple Example: 
 
-```{r, echo = FALSE, fig.align = "center", out.width="80%"}
+```{r, echo = FALSE, fig.align = "center", out.width="60%"}
 url <- "https://miro.medium.com/max/479/1*xGLzg4lqC1U9Gat2rYeaHQ.png"
 knitr::include_graphics(url)
 ```
@@ -486,8 +509,13 @@ Source: [Kinley (2020)](https://towardsdatascience.com/multi-channel-marketing-a
 ]
 
 ---
-class: font160
+class: font140
 # Markov Attribution Models
+
+```{r, echo = FALSE, fig.align = "center", out.width="20%"}
+url <- "https://png.pngtree.com/png-vector/20221120/ourmid/pngtree-delete-button-click-color-icon-icon-drawing-pictogram-vector-png-image_41860258.jpg"
+knitr::include_graphics(url)
+```
 
 Key Notion: Measuring the **removal effect** 
 
@@ -507,15 +535,33 @@ We'll skip the nitty gritty details - it gets computationally intensive
 class: font160
 # Shapley Value Attribution
 
-**Shapley Value Attribution**: finds each ad campaign;s **marginal contribution**, averaged over every sequence where the campaign could have been shown
+
+```{r, echo = FALSE, fig.align = "center", out.width="30%"}
+url <- "https://www.shutterstock.com/image-vector/concept-vector-graphic-colorful-school-600nw-142047952.jpg"
+knitr::include_graphics(url)
+```
+
+**Shapley Value Attribution**: finds each ad campaign's **marginal contribution**, averaged over every sequence where the campaign could have been shown
 
 * Different campaigns work *together* in cooperation to generate value (i.e. some KPI)
 * Based on co-operative game theory (beyond the scope of this class...)
+
+
+---
+class: font160
+# Shapley Value Attribution
+
+```{r, echo = FALSE, fig.align = "center", out.width="30%"}
+url <- "https://lh6.googleusercontent.com/proxy/rpT5zD5-WHz20Xjb62f-QiI5R1GHuCPd6Exshs3NmtIyQ7E7JHGDUf6zqmOjK-sXqQqLRBS6R51LGz4R_8HRtiWwTqYf1LgCWocVe8U"
+knitr::include_graphics(url)
+```
 
 Key Idea: Measuring each campaign's **marginal contribution**
 
 * Determined by what is gained or lost by removing them from a coalition of campaigns
 * Order of ads doesn't matter (in the standard setup)
+
+More info on Shapley Values? See [here](https://medium.com/@shreya.rao/economics-illustrated-shapley-values-7d33df43ada8)
 
 ---
 # Two Channel Example: Conversions
