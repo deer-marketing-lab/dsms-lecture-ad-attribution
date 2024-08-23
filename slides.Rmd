@@ -40,8 +40,8 @@ knitr::include_graphics(url)
 Course Themes:
 
 1. **Measuring Advertising Effects**
+  * `r icons:::icon_style(icons::fontawesome("bullseye", style = "solid"), scale = 1)` Advertising Attribution Models
 2. User Generated Content & Social Media
-3. Impact of Privacy Regulations 
 
 ---
 # Wasteful Advertising Expenditures? 
@@ -591,15 +591,6 @@ Source: [Dataiku (2020)](https://blog.dataiku.com/step-up-your-marketing-attribu
 ]
 
 ---
-class: font160
-# Two Channel Example: Conversions II
-
-.center[
-**In Class ...**
-]
-
-
----
 class: inverse, center, middle
 # Concluding Thoughts 
 
@@ -668,10 +659,10 @@ I have borrowed, at times quite liberally, from the following:
 Suggested Citation:
 
 ```{r, engine='out', eval = FALSE}
-@misc{deerdsms2023,
+@misc{deerdsms2024,
       title={"Digital and Social Media Strategies: Marketing Attribution Models"},
       author={Lachlan Deer},
-      year={2023},
+      year={2024},
       url = "https://github.com/deer-marketing-lab/dsms-lecture-ad-attribution"
 }
 ```
