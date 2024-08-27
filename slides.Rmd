@@ -33,7 +33,7 @@ class: font160
 # Where Are We Now? 
 
 ```{r, echo = FALSE, fig.align = "center", out.width="35%"}
-url <- "https://png.pngtree.com/png-clipart/20211024/original/pngtree-pile-of-cartoonish-cute-doodle-theme-books-png-image_6871556.png"
+url <- "figs/pngtree-pile-of-cartoonish-cute-doodle-theme-books-png-image_6871556.png"
 knitr::include_graphics(url)
 ```
 
@@ -513,7 +513,7 @@ class: font140
 # Markov Attribution Models
 
 ```{r, echo = FALSE, fig.align = "center", out.width="20%"}
-url <- "https://png.pngtree.com/png-vector/20221120/ourmid/pngtree-delete-button-click-color-icon-icon-drawing-pictogram-vector-png-image_41860258.jpg"
+url <- "figs/pngtree-delete-button-click-color-icon-icon-drawing-pictogram-vector-png-image_41860258.jpg"
 knitr::include_graphics(url)
 ```
 
@@ -623,6 +623,8 @@ Outstanding issues in Marketing Attribution Models:
 
 * **Online / Offline Bridges** 
   - Exposure to offline campaigns (TV, newspapers) difficult to track at user level
+
+* **End of third-party cookies** (planned 2025)
 
 ---
 class: font160
