@@ -632,7 +632,7 @@ class: font160
 
 .pull-left[
 ```{r, echo = FALSE, fig.align = "center", out.width="100%"}
-url <- "figs/2022-survey.png"
+url <- "figs/2024-survey.png"
 knitr::include_graphics(url)
 ```
 ]
